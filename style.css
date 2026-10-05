@@ -1,1 +1,429 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f7f8fc;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: #222;
+}
+
+.logo span,
+footer span {
+    color: #6c4df6;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6c4df6;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 60px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #eeeaff,
+        #ffffff,
+        #e8f0ff
+    );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.welcome {
+    color: #6c4df6;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #6c4df6;
+}
+
+.hero p:not(.welcome) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #666;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    background: #6c4df6;
+    color: white;
+
+    padding: 13px 30px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #5135d4;
+    transform: translateY(-2px);
+}
+
+/* Events Section */
+.events-section {
+    padding: 90px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading p,
+.small-heading {
+    color: #6c4df6;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2,
+.about-content h2,
+.contact-box h2 {
+    font-size: 36px;
+    margin: 8px 0 12px;
+}
+
+.section-heading span {
+    color: #777;
+}
+
+/* Event Cards */
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.event-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.event-card.featured {
+    border-top: 5px solid #6c4df6;
+}
+
+.event-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.event-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6c4df6;
+    margin-bottom: 10px;
+}
+
+.event-date strong {
+    font-size: 28px;
+}
+
+.event-date span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.event-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.location {
+    margin: 15px 0;
+}
+
+.register-btn {
+    display: inline-block;
+    color: #6c4df6;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.register-btn:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+.about-section {
+    background: #171522;
+    color: white;
+    padding: 90px 20px;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    margin-bottom: 20px;
+}
+
+.about-content > p:not(.small-heading) {
+    color: #c7c5d0;
+}
+
+.stats {
+    margin-top: 45px;
+
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats strong {
+    font-size: 32px;
+    color: #a99aff;
+}
+
+.stats span {
+    color: #ccc;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 90px 20px;
+}
+
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-box > p:not(.small-heading) {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 15px 18px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #6c4df6;
+}
+
+button {
+    border: none;
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #6c4df6;
+    color: white;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5135d4;
+}
+
+/* Footer */
+footer {
+    background: #0e0d14;
+    color: white;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    max-width: 1150px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+}
+
+.footer-content p {
+    color: #aaa;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .event-container {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+        margin: auto;
+    }
+
+    .stats {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p:not(.welcome) {
+        font-size: 15px;
+    }
+
+    .section-heading h2,
+    .about-content h2,
+    .contact-box h2 {
+        font-size: 28px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+
